@@ -6,14 +6,14 @@ const Projects = () => {
   const projects = [
     {
       title: 'AWS CloudFormation Secure S3 Bucket',
-      description: 'Infrastructure-as-Code solution for deploying secure S3 buckets with best practice security configurations',
+      description: 'Infrastructure-as-Code template that deploys S3 buckets with security controls enforced at provision time rather than applied afterward. Public access is blocked and AES-256 server-side encryption is enforced by default, so the secure configuration is the only configuration available at deploy time.',
       technologies: ['CloudFormation', 'Infrastructure-as-Code (IaC)', 'Security Hub'],
       githubUrl: 'https://github.com/travdunc/AWS-CloudFormation-Secure-S3-Bucket/',
       icon: <Server className="w-8 h-8" />,
       keyPoints: [
-        'Automated secure bucket deployment',
-        'Built-in compliance configurations',
-        'Security best practices implementation',
+        'Public access blocked at the bucket level',
+        'AES-256 server-side encryption enforced by default',
+        'Maps to NIST 800-53 SC-28 (protection of information at rest) and AC-6 (least privilege)',
       ],
     },
     {
