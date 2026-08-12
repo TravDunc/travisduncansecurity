@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Travis Duncan</h3>
             <p className="text-gray-400 text-sm">
-              Senior GRC Engineer & Technical Program Manager
+              Information Systems Security Manager
             </p>
             <p className="text-gray-500 text-sm">
               Making security accessible and practical

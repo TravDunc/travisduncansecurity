@@ -18,7 +18,7 @@ const Hero = () => {
               Travis Duncan
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">
-              Senior GRC Engineer | Technical Program Manager
+              Information Systems Security Manager
             </p>
             <div className="flex flex-col items-center gap-2">
               <p className="text-lg text-gray-400 flex items-center gap-2">
