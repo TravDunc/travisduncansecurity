@@ -1,0 +1,470 @@
+# Travis Duncan - Professional Portfolio Website
+
+> **Status:** ✅ Production Ready | **Last Updated:** October 7, 2025
+
+A modern, professional portfolio website showcasing expertise as a Senior GRC Engineer and Technical Program Manager, specializing in cloud security, compliance automation, and business continuity.
+
+## 🎯 Portfolio Overview
+
+**Live Locally:** `npm run dev` → http://localhost:3000  
+**Domain:** travisduncansecurity.com  
+**Position:** Open to full-time opportunities and select consulting engagements
+
+### Key Highlights
+
+- 🛡️ **6 Professional Certifications** (CISSP, CCSP, CISM, CGRC, NIST CSF, CBCP)
+- 💼 **8+ Years Experience** in cybersecurity and GRC
+- ☁️ **Cloud Expertise** (AWS, Azure)
+- 📊 **4 Featured Projects** (GRC, Business Continuity, Risk Management)
+- ✨ **Modern Design** with professional animations
+
+---
+
+## 🚀 Features
+
+### Design & UX
+- **Dark Mode Theme**: Professional gray-900 background with blue/purple accents
+- **Scroll Animations**: Progress bar, fade-in sections, staggered cards
+- **Responsive Design**: Mobile-first, optimized for all devices
+- **Professional Branding**: Domain integration (travisduncansecurity.com)
+
+### Content Sections
+- **Hero**: Name, title, location, CTAs, social links
+- **About**: Professional summary with experience highlights
+- **Skills**: 6 categories (Cloud, Security, Tools, Programming, GRC, Core)
+- **Projects**: 1 active + 3 strategic placeholders
+- **Certifications**: 6 verifiable credentials with Credly links
+- **Contact**: Email, LinkedIn, GitHub, Calendly booking
+
+### Technical Features
+- **Performance**: Code splitting, optimized bundling, CDN delivery
+- **SEO**: Meta tags, semantic HTML, proper heading hierarchy
+- **Accessibility**: High contrast, keyboard navigation, ARIA labels
+- **Security**: No sensitive data, environment variables, secure external links
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend Framework:**
+- React 18.2.0
+- React Router DOM 6.20.0
+- Framer Motion 10.16.16 (animations)
+
+**Styling & UI:**
+- Tailwind CSS 3.4.0
+- PostCSS + Autoprefixer
+- Lucide React (icons)
+- Custom gradient animations
+
+**Build & Development:**
+- Vite 7.1.9 (fast build tool)
+- @vitejs/plugin-react
+
+**Deployment & Hosting:**
+- AWS S3 (static hosting)
+- AWS CloudFront (CDN)
+- AWS CloudFormation (infrastructure)
+
+## 📦 Quick Start
+
+### Prerequisites
+- Node.js 18+ (LTS recommended)
+- npm or yarn
+- Git (optional)
+
+### Installation
+
+```powershell
+# Navigate to portfolio directory
+cd C:\Code_Scripts\website\aws-deployment-kit\portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Open browser to http://localhost:3000
+```
+
+### Available Commands
+
+```bash
+npm run dev      # Start dev server (localhost:3000)
+npm run build    # Build for production (outputs to /dist)
+npm run preview  # Preview production build locally
+```
+
+### First Time Setup
+
+See **START_HERE.md** for detailed setup instructions.
+
+## 🚢 Deployment to AWS
+
+### Prerequisites
+- AWS Account
+- AWS CLI configured
+- IAM user with appropriate permissions (see **IAM_PERMISSIONS.md**)
+
+### Deployment Steps
+
+1. **Build the project:**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to AWS:**
+   Follow the comprehensive guide in **DEPLOYMENT_GUIDE.md**
+
+3. **Verify deployment:**
+   - S3 bucket created and configured
+   - CloudFront distribution active
+   - DNS records updated (if using custom domain)
+
+### Quick Deploy
+
+```bash
+# After building
+../scripts/deploy.sh <bucket-name> <distribution-id> <aws-profile>
+```
+
+See **DEPLOYMENT_GUIDE.md** for detailed instructions.
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── 📄 Documentation (7 files)
+│   ├── README.md                  ← You are here
+│   ├── START_HERE.md              ← Quick start guide
+│   ├── SETUP_INSTRUCTIONS.md      ← Detailed setup
+│   ├── DEPLOYMENT_GUIDE.md        ← AWS deployment
+│   ├── IAM_PERMISSIONS.md         ← AWS security
+│   ├── QUICK_REFERENCE.md         ← Commands cheat sheet
+│   └── CHANGELOG.md               ← Version history
+│
+├── 📁 public/
+│   └── resume.pdf                 ← Resume file (698 KB)
+│
+├── 📁 src/
+│   ├── 📁 components/ (10 files)
+│   │   ├── Navbar.jsx             ← Sticky navigation
+│   │   ├── Hero.jsx               ← Landing section
+│   │   ├── About.jsx              ← Professional summary
+│   │   ├── Skills.jsx             ← Skills grid
+│   │   ├── Projects.jsx           ← Project showcase
+│   │   ├── Certifications.jsx     ← Credentials display
+│   │   ├── Contact.jsx            ← Contact methods
+│   │   ├── Footer.jsx             ← Footer with links
+│   │   ├── ScrollProgress.jsx     ← Scroll progress bar
+│   │   └── FadeInSection.jsx      ← Animation wrapper
+│   │
+│   ├── App.jsx                    ← Main app component
+│   ├── main.jsx                   ← React entry point
+│   └── index.css                  ← Global styles + Tailwind
+│
+├── 📄 Configuration
+│   ├── package.json               ← Dependencies & scripts
+│   ├── vite.config.js             ← Vite configuration
+│   ├── tailwind.config.js         ← Tailwind customization
+│   ├── postcss.config.js          ← PostCSS setup
+│   └── .env.example               ← Environment template
+│
+├── index.html                     ← HTML template
+└── .gitignore                     ← Git ignore rules
+```
+
+## 📊 Portfolio Content
+
+### Personal Information
+- **Name:** Travis Duncan
+- **Title:** Senior GRC Engineer | Technical Program Manager
+- **Location:** Las Vegas, NV (Remote available)
+- **Domain:** travisduncansecurity.com
+- **Status:** Open to full-time opportunities and select consulting engagements
+
+### Professional Highlights
+- 🛡️ 8+ years in cybersecurity and GRC
+- ☁️ Cloud security specialist (AWS, Azure)
+- 📋 Compliance automation expert
+- 🎯 Risk management framework implementation
+- 🔄 Business continuity and disaster recovery
+
+### Certifications (6 Total)
+1. **CISSP** - Certified Information Systems Security Professional
+2. **CCSP** - Certified Cloud Security Professional
+3. **CISM** - Certified Information Security Manager
+4. **CGRC** - Certified in Governance, Risk, & Compliance
+5. **NIST CSF Foundation** - NIST Cybersecurity Framework
+6. **CBCP** - Certified Business Continuity Professional
+
+*All certifications verifiable via Credly links on the site*
+
+### Featured Projects
+1. **AWS CloudFormation Secure S3 Bucket** (Active)
+   - Infrastructure-as-Code for secure S3 deployment
+   - GitHub: https://github.com/travdunc/AWS-CloudFormation-Secure-S3-Bucket/
+
+2. **GRC Automation Dashboard** (Coming Soon)
+   - Compliance monitoring and risk management platform
+   - Tech: Python, AWS Lambda, DynamoDB, CloudWatch
+
+3. **Business Continuity Management System** (Coming Soon)
+   - DR orchestration and BC planning platform
+   - Tech: AWS, Terraform, Lambda, SNS
+
+4. **Enterprise Risk Assessment Platform** (Coming Soon)
+   - Automated risk assessment and treatment tracking
+   - Tech: Python, AWS, React Dashboard
+
+### Skills Organized by Category
+- **Cloud Platforms:** AWS, Azure (AZ-900, SC-900)
+- **Security & Compliance:** NIST
+- **Tools:** CloudFormation, Security Hub, GuardDuty, CloudTrail
+- **Programming:** Python, PowerShell
+- **GRC Frameworks:** NIST RMF
+- **Core Competencies:** Risk Assessment, Policy Development, Vulnerability Management
+
+---
+
+## 🎨 Design & Animations
+
+### Color Scheme
+- **Background:** Gray-900 (#0f172a) - Dark mode
+- **Primary:** Blue-600 (#0284c7) - Tech-focused
+- **Accent:** Purple gradients - Modern
+- **Text:** White/Gray - High contrast
+
+### Animations (Tier 1)
+- ✅ **Scroll Progress Bar** - Top of page, grows with scroll
+- ✅ **Section Fade-In** - Smooth entrance when scrolling
+- ✅ **Staggered Cards** - Sequential appearance (skills, projects, certs)
+- ✅ **Hover Effects** - Scale transforms, color transitions
+- ✅ **Smooth Scrolling** - Navigation jumps to sections
+
+### Responsive Breakpoints
+- **Mobile:** 320px+ (single column)
+- **Tablet:** 768px+ (two columns)
+- **Desktop:** 1024px+ (three columns)
+- **Large:** 1280px+ (optimized spacing)
+
+---
+
+## 🔗 External Links
+
+### Contact & Social
+- **Email:** travis@travisduncansecurity.com
+- **LinkedIn:** https://www.linkedin.com/in/travis-w-duncan
+- **GitHub:** https://github.com/travdunc
+- **Calendly:** https://calendly.com/travisduncan/30min
+- **Domain:** travisduncansecurity.com
+
+### Verification Links
+All certifications link to Credly for verification:
+- CISSP, CCSP, CISM, CGRC, NIST CSF Foundation, CBCP
+
+---
+
+## 🎯 Customization Guide
+
+### Easy Updates
+**Update Content:**
+- Edit component files in `src/components/`
+- Update contact info in `Contact.jsx` (lines 5-35)
+- Modify project descriptions in `Projects.jsx`
+- Add/remove certifications in `Certifications.jsx`
+
+**Change Colors:**
+- Edit `tailwind.config.js` (lines 8-24)
+- Modify gradient colors in component files
+
+**Update Links:**
+- LinkedIn, GitHub, Email in `Hero.jsx`, `Contact.jsx`, `Footer.jsx`
+- Calendly URL in `Navbar.jsx` and `Contact.jsx`
+
+### Medium Updates
+**Add Sections:**
+1. Create new component in `src/components/`
+2. Import in `App.jsx`
+3. Add to navigation in `Navbar.jsx`
+
+**Modify Animations:**
+- Adjust timing in `FadeInSection.jsx`
+- Change stagger delays in component files
+- Edit Tailwind animations in `tailwind.config.js`
+
+### Advanced Customization
+**Add Features:**
+- Contact form with AWS SES
+- Blog section with MDX
+- Analytics (Google Analytics, Plausible)
+- CMS integration (Contentful, Sanity)
+- Dark/light mode toggle
+- Internationalization (i18n)
+
+See **QUICK_REFERENCE.md** for common edits.
+
+---
+
+## 🔒 Security & Best Practices
+
+### Implemented
+- ✅ No hardcoded secrets or API keys
+- ✅ Environment variables for sensitive data
+- ✅ `.gitignore` properly configured
+- ✅ External links use `rel="noopener noreferrer"`
+- ✅ HTTPS only (enforced by CloudFront)
+- ✅ Dependencies regularly updated
+
+### Recommendations
+- Keep dependencies updated: `npm audit` regularly
+- Use AWS IAM least-privilege policies (see IAM_PERMISSIONS.md)
+- Enable CloudFront logging for monitoring
+- Set up AWS billing alerts
+- Rotate AWS access keys every 90 days
+
+---
+
+## 📈 Performance & SEO
+
+### Performance Optimizations
+- ✅ Code splitting (React vendor chunk)
+- ✅ Minified production builds
+- ✅ Optimized asset bundling
+- ✅ CDN delivery (CloudFront)
+- ✅ Lazy loading ready
+
+### SEO Configuration
+```html
+<title>Travis Duncan | Senior GRC Engineer</title>
+<meta name="description" content="Travis Duncan - Senior GRC Engineer & Technical Program Manager specializing in cybersecurity, compliance automation, and risk management">
+<meta name="keywords" content="GRC Engineer, Cybersecurity, AWS Security, Compliance, Risk Management, CISSP, CCSP">
+```
+
+### Accessibility
+- Semantic HTML structure
+- Proper heading hierarchy (h1 → h6)
+- High contrast text (WCAG AA compliant)
+- Keyboard navigation support
+- Screen reader friendly
+
+---
+
+## 💰 Cost Estimate
+
+### Development
+- Portfolio build: **$0** (completed)
+- Tools & frameworks: **$0** (open source)
+
+### Hosting (AWS)
+- **First 12 months:** ~$0-1/month (Free Tier)
+- **After Free Tier:** ~$1-3/month
+  - S3 storage: ~$0.50/month
+  - CloudFront: ~$0.50-2/month
+  - Data transfer: Minimal
+
+### Optional Costs
+- **Custom domain:** ~$10-15/year (Route 53 or registrar)
+- **SSL certificate:** $0 (AWS Certificate Manager is free)
+
+**Total Investment:**
+- Setup: **$0**
+- First year: **$0-25**
+- Ongoing: **$12-50/year**
+
+---
+
+## 📚 Documentation
+
+### Getting Started
+1. **START_HERE.md** - Quick start guide (begin here!)
+2. **SETUP_INSTRUCTIONS.md** - Detailed setup with troubleshooting
+
+### Deployment
+3. **DEPLOYMENT_GUIDE.md** - Comprehensive AWS deployment
+4. **IAM_PERMISSIONS.md** - Required AWS permissions
+
+### Reference
+5. **QUICK_REFERENCE.md** - Commands and common edits
+6. **CHANGELOG.md** - Version history and updates
+7. **README.md** - This file (overview)
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Port 3000 already in use:**
+```bash
+# Kill process on port 3000 (Windows)
+netstat -ano | findstr :3000
+taskkill /PID <PID> /F
+```
+
+**Dependencies not installing:**
+```bash
+# Clear npm cache
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**Build errors:**
+```bash
+# Clear Vite cache
+rm -rf node_modules/.vite
+npm run build
+```
+
+**Hot reload not working:**
+```bash
+# Restart dev server
+Ctrl+C (stop server)
+npm run dev
+```
+
+See **SETUP_INSTRUCTIONS.md** for more troubleshooting.
+
+---
+
+## 📝 Version History
+
+See **CHANGELOG.md** for detailed version history.
+
+**Current Version:** 1.0.0  
+**Last Updated:** October 7, 2025  
+**Status:** Production Ready
+
+## 📝 License
+
+© 2025 travisduncansecurity.com | All rights reserved.
+
+---
+
+## 📧 Contact
+
+**Travis Duncan**  
+Senior GRC Engineer | Technical Program Manager
+
+- **Email:** travis@travisduncansecurity.com
+- **LinkedIn:** [travis-w-duncan](https://www.linkedin.com/in/travis-w-duncan)
+- **GitHub:** [travdunc](https://github.com/travdunc)
+- **Website:** travisduncansecurity.com
+- **Schedule:** [Book a 30-minute call](https://calendly.com/travisduncan/30min)
+
+**Status:** Open to full-time opportunities and select consulting engagements.
+
+---
+
+## 🎉 Ready to Launch!
+
+Your portfolio is production-ready with:
+- ✅ Modern React architecture
+- ✅ Professional design and animations
+- ✅ Full AWS deployment support
+- ✅ Comprehensive documentation
+- ✅ SEO and performance optimized
+
+**Next Step:** Open **START_HERE.md** and get started! 🚀
