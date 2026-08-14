@@ -1,8 +1,8 @@
 # Travis Duncan - Professional Portfolio Website
 
-> **Status:** ✅ Production Ready | **Last Updated:** October 7, 2025
+> **Status:** ✅ Production Ready | **Last Updated:** August 12, 2026
 
-A modern, professional portfolio website showcasing expertise as a Information Systems Security Manager and Technical Program Manager, specializing in cloud security, compliance automation, and business continuity.
+A modern, professional portfolio website showcasing expertise as a Information Systems Security Manager, specializing in cloud security, compliance automation, and business continuity.
 
 ## 🎯 Portfolio Overview
 
