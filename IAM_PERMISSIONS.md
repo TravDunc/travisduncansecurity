@@ -383,23 +383,6 @@ aws configure set region us-east-1 --profile build
 
 ---
 
-## 🎯 Quick Setup for Testing (Development Only)
-
-**WARNING:** Only use for testing/development!
-
-```bash
-# Create user with admin access (NOT for production!)
-aws iam create-user --user-name portfolio-dev
-aws iam attach-user-policy \
-  --user-name portfolio-dev \
-  --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
-aws iam create-access-key --user-name portfolio-dev
-```
-
-**For Production:** Use least-privilege policies!
-
----
-
 ## 📝 Complete Setup Checklist
 
 - [ ] IAM user created
