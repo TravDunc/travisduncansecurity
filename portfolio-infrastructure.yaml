@@ -7,12 +7,10 @@ Parameters:
   DomainName:
     Type: String
     Description: 'Your domain name (e.g., travisduncansecurity.com)'
-    Default: 'travisduncansecurity.com'
   
   HostedZoneId:
     Type: String
     Description: 'Existing Route 53 Hosted Zone ID for your domain'
-    Default: 'Z07546006238QOGKRJV7'
   
   BucketNamePrefix:
     Type: String
@@ -100,9 +98,9 @@ Resources:
   WebsiteCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: travisduncansecurity.com
+      DomainName: !Ref DomainName
       SubjectAlternativeNames:
-        - www.travisduncansecurity.com
+        - !Sub 'www.${DomainName}'
       ValidationMethod: DNS
       Tags:
         - Key: Project
@@ -132,8 +130,8 @@ Resources:
         
         # Domain aliases
         Aliases:
-          - travisduncansecurity.com
-          - www.travisduncansecurity.com
+          - !Ref DomainName
+          - !Sub 'www.${DomainName}'
         
         # SSL/TLS certificate
         ViewerCertificate:
@@ -187,7 +185,7 @@ Resources:
           IncludeCookies: false
         
         # Comment
-        Comment: CloudFront distribution for travisduncansecurity.com
+        Comment: !Sub 'CloudFront distribution for ${DomainName}'
       
       # Tags (must be outside DistributionConfig)
       Tags:
@@ -238,8 +236,8 @@ Resources:
     Type: AWS::Route53::RecordSet
     Condition: HasExistingHostedZone
     Properties:
-      HostedZoneId: Z07546006238QOGKRJV7
-      Name: travisduncansecurity.com
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Ref DomainName
       Type: A
       AliasTarget:
         HostedZoneId: Z2FDTNDATAQYW2  # CloudFront hosted zone ID (constant)
@@ -250,8 +248,8 @@ Resources:
     Type: AWS::Route53::RecordSet
     Condition: HasExistingHostedZone
     Properties:
-      HostedZoneId: Z07546006238QOGKRJV7
-      Name: www.travisduncansecurity.com
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub 'www.${DomainName}'
       Type: A
       AliasTarget:
         HostedZoneId: Z2FDTNDATAQYW2  # CloudFront hosted zone ID (constant)
@@ -262,8 +260,8 @@ Resources:
     Type: AWS::Route53::RecordSet
     Condition: HasExistingHostedZone
     Properties:
-      HostedZoneId: Z07546006238QOGKRJV7
-      Name: travisduncansecurity.com
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Ref DomainName
       Type: AAAA
       AliasTarget:
         HostedZoneId: Z2FDTNDATAQYW2  # CloudFront hosted zone ID (constant)
@@ -274,8 +272,8 @@ Resources:
     Type: AWS::Route53::RecordSet
     Condition: HasExistingHostedZone
     Properties:
-      HostedZoneId: Z07546006238QOGKRJV7
-      Name: www.travisduncansecurity.com
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub 'www.${DomainName}'
       Type: AAAA
       AliasTarget:
         HostedZoneId: Z2FDTNDATAQYW2  # CloudFront hosted zone ID (constant)
